@@ -10,6 +10,13 @@ import { FaLinkedinIn } from "react-icons/fa";
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
+  var social ={
+    github:"",
+    twitter:"",
+    linkedin:"",
+    facebook:"",
+  }
+  var username = "thienma"
   return (
     <Container fluid className="footer">
       <Row>
@@ -17,13 +24,13 @@ function Footer() {
           <h3>Developed by PND</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} thienma</h3>
+          <h3>Copyright © {year} ${username}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/soumyajit4419"
+                href={social.github}
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -33,7 +40,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://twitter.com/Soumyajit4419"
+                href={social.twitter}
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -43,7 +50,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/soumyajit4419/"
+                href={social.linkedin}
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -53,7 +60,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/s.o.u.m.y.a_j.i.t/"
+                href={social.twitter}
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"

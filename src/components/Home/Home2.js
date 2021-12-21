@@ -8,7 +8,6 @@ import {useSelector} from "react-redux"
 
 function Home2() {
   const owner = useSelector((state)=>state.owner)
-  const mailTo = "mailTo:"+owner.email;
 
   return (
     <Container fluid className="home-about-section" id="about">

@@ -17,6 +17,7 @@ function ResumeNew() {
 
   useEffect(() => {
     setWidth(window.innerWidth);
+    console.log(width);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

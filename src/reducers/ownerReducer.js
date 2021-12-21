@@ -4,7 +4,7 @@ const initialState = {
   ajaxInfo: {
     isLoading: false,
   },
-  resumeURL: "",
+  resumeURL: "https://drive.google.com/file/d/1Q9rzKuQlvowrzJebL-uL1MWob3zm0mJG/view?usp=sharing",
   social: {
     github: "",
     twitter: "",

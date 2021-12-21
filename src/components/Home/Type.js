@@ -1,22 +1,21 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import {useSelector} from "react-redux"
 
 function Type() {
+  const ownerRoles = useSelector((state)=>state.owner.roles)
+  if (ownerRoles){
   return (
     <Typewriter
       options={{
-        strings: [
-          "Backend Engineer",
-          "Full stack engineer",
-          "Researcher",
-          "Open Source Contributor",
-        ],
+        strings: ownerRoles,
         autoStart: true,
         loop: true,
         deleteSpeed: 50,
       }}
     />
   );
+  }
 }
 
 export default Type;

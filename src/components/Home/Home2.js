@@ -8,45 +8,17 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import {useSelector} from "react-redux"
 
 function Home2() {
-    var social ={
-      github:"",
-      twitter:"",
-      linkedin:"",
-      facebook:"",
-    }
-    var html = ` <h1 style={{ fontSize: "2.6em" }}>
-    LET ME <span className="purple"> INTRODUCE </span> MYSELF
-  </h1>
-  <p className="home-about-body">
-    I fell in love with programming and I have at least learnt
-    something, I think… 🤷‍♂️
-    <br />
-    <br />I am fluent in classics like
-    <i>
-      <b className="purple"> Golang, C++ and Python,.. </b>
-    </i>
-    <br />
-    <br />
-    My field of Interest's are building new &nbsp;
-    <i>
-      <b className="purple">Service and Product for million  users </b> and
-      also in areas related to
-      <b className="purple">
-        Computer vision
-      </b>
-    </i>
-    <br />
-    <br />
-  </p>`
+  const owner = useSelector((state)=>state.owner)
 
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description" >
-          <span dangerouslySetInnerHTML={{__html:html}} />
+          <span dangerouslySetInnerHTML={{__html:owner.introduceHTML}} />
 
           </Col>
           <Col md={4} className="myAvtar">
@@ -64,7 +36,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href={social.github}
+                  href={owner.social.github}
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -74,7 +46,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href={social.twitter}
+                  href={owner.social.twitter}
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -84,7 +56,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href={social.linkedin}
+                  href={owner.social.linkedin}
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"

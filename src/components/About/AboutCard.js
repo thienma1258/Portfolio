@@ -1,26 +1,25 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import {useSelector} from "react-redux"
 
 function AboutCard() {
-  var descriptionAbout = "I am a Backend engineer in NAB studio"
-  var name = "Ngoc Dong Pham"
-  var activites  = ["Playing Games"," Writting Tech Blogs","Playing football","Research new technology"]
+  const owner = useSelector((state)=>state.owner)
 
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">{name} </span>
+            Hi Everyone, I am <span className="purple">{owner.fullName} </span>
             from <span className="purple"> TPHCM, Vietnam.</span>
-            <br />{descriptionAbout}
+            <br />{owner.about}
             <br />
             <br />  
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
-          {activites.map(name => (  
+          {owner.hobbits.map(name => (  
           <li className="about-activity">   
                          <ImPointRight /> {name}  
           </li>  
@@ -31,7 +30,7 @@ function AboutCard() {
           <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
             "I can make thing that better for users!"{" "}
           </p>
-          <footer className="blockquote-footer">{name}</footer>
+          <footer className="blockquote-footer">{owner.fullName}</footer>
         </blockquote>
       </Card.Body>
     </Card>

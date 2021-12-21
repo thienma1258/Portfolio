@@ -17,7 +17,6 @@ if (items.length % colPerRow > 0) {
 var rowCard = [];
 for (var i = 0; i < rows; i++) {
   let itemRender = items.slice(i*colPerRow,(i+1)*colPerRow)
-  console.log(itemRender);
   rowCard.push(
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
       {itemRender.map((item) => (

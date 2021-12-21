@@ -51,6 +51,14 @@ html {
   width: 7px;
 }
 
+.clear {
+  clear: both;
+}
+
+.margin-botton-2em {
+  margin-bottom: 2em;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: #2d1950;
@@ -249,6 +257,10 @@ html {
 
 .home-header {
   padding-top: 80px !important;
+}
+
+.align-items-right{
+  float: right;
 }
 
 .home-section {

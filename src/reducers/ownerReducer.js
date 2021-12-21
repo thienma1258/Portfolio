@@ -5,6 +5,7 @@ const initialState = {
     isLoading: false,
   },
   resumeURL: "https://drive.google.com/file/d/1Q9rzKuQlvowrzJebL-uL1MWob3zm0mJG/view?usp=sharing",
+  email:"cpud1258@gmail.com",
   social: {
     github: "",
     twitter: "",

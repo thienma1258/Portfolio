@@ -1,4 +1,4 @@
-import chatify from "../Assets/Projects/chatify.png";
+import chatify from "../Assets/Projects/algo.png";
 
 
 const projectState = {

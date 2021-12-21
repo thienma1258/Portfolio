@@ -4,6 +4,9 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import GetInTouchSection  from "../Contact/Contact";
+import SocialSection  from "../Contact/Social";
+
 import {useSelector} from "react-redux"
 
 const Home = ({ data, actions }) => {
@@ -30,7 +33,7 @@ const Home = ({ data, actions }) => {
               <h1 className="heading-name">
                 I'M <br />
                 <strong className="main-name" style={{ fontSize: "1em" }} >
-                  {owner.fullName} 
+                  {owner.fullName}
                 </strong>
               </h1>
 
@@ -46,6 +49,8 @@ const Home = ({ data, actions }) => {
         </Container>
       </Container>
       <Home2 />
+      <GetInTouchSection/>
+      <SocialSection/>
     </section>
   );
 };

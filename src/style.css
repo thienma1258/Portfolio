@@ -765,3 +765,7 @@ html {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.alert-notification{
+  margin-top: 4em;
+}

@@ -2,6 +2,7 @@ import { Container,Row,Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+
 const SocialSection = () => {
   const owner = useSelector((state) => state.owner);
   const mailTo = "mailTo:" + owner.email;

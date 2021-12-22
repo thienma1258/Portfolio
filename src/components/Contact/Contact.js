@@ -1,4 +1,4 @@
-import { Container, Form, Button,FloatingLabel } from "react-bootstrap";
+import { Container, Form, Button, FloatingLabel } from "react-bootstrap";
 
 const GetInTouchSection = () => {
   return (
@@ -14,40 +14,45 @@ const GetInTouchSection = () => {
         </p>
 
         <Form>
-          <Form.Group  className="mb-3" controlId="formPlaintextEmail" class ="margin-botton-2em">
-          <FloatingLabel
-    controlId="floatingInput"
-    label="Email address"
-    className="mb-3"
-  >
-    <Form.Control type="email" placeholder="name@example.com" />
-  </FloatingLabel>
+          <Form.Group
+            className="mb-3 margin-botton-2em"
+            controlId="formPlaintextEmail"
+          >
+            <FloatingLabel
+              controlId="floatingInput"
+              label="Email"
+              className="mb-3"
+            >
+              <Form.Control type="Email" placeholder="name@example.com" />
+            </FloatingLabel>
           </Form.Group>
 
-          <Form.Group  className="mb-3" controlId="formPlaintextEmail" class ="margin-botton-2em">
-          <FloatingLabel
-    controlId="floatingInput"
-    label="name"
-    className="mb-3"
-  >
-    <Form.Control type="message" placeholder="name"  />
-  </FloatingLabel>
+          <Form.Group
+            className="mb-3 margin-botton-2em"
+            controlId="formPlaintextEmail"
+          >
+            <FloatingLabel
+              controlId="floatingInput"
+              label="Name"
+              className="mb-3"
+            >
+              <Form.Control type="message" placeholder="Name" />
+            </FloatingLabel>
           </Form.Group>
           <Form.Group
-          className="mb-3 margin-botton-2em"
-          controlId="formPlaintextPassword"
-        >
-          <Form.Label column sm="2">
-            Message
-          </Form.Label>
-          <Form.Control
-      as="textarea"
-      placeholder="Leave a comment here"
-      style={{ height: '100px' }}
-    />
-        </Form.Group>
-        <Button type="submit"  className="align-items-right" >Submit form</Button>
-        <div class ="clear"></div>
+            className="mb-3 margin-botton-2em"
+            controlId="formPlaintextPassword"
+          >
+            <Form.Control
+              as="textarea"
+              placeholder="Leave a comment here"
+              style={{ height: "100px" }}
+            />
+          </Form.Group>
+          <Button  variant="primary"  type="submit" className="align-items-right primary">
+            Submit form
+          </Button>
+          <div className="clear"></div>
         </Form>
       </Container>
     </section>

@@ -1,8 +1,11 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 function Github() {
+  const owner = useSelector((state) => state.owner);
+  const username = owner.userName || [];
   const colourTheme = {
     background: "transparent",
     text: "#ffffff",
@@ -18,8 +21,8 @@ function Github() {
         Days I <strong className="purple">Code</strong>
       </h1>
       <GitHubCalendar
-        username="thienma1258"
-        blockSize={15}
+        username={username}
+        blockSize={12}
         blockMargin={5}
         theme={colourTheme}
         fontSize={16}

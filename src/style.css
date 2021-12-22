@@ -43,6 +43,11 @@ html {
   height: 100vh;
 }
 
+
+#bg-image {
+  width:100%
+}
+
 /* --------- */
 /*Scrollbar   */
 /* --------- */
@@ -516,6 +521,17 @@ html {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  /* height:49%; */
+}
+
+.resume-page {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.button-page{
+  margin:2em;
 }
 
 .blog-img {
@@ -526,7 +542,7 @@ html {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #623686 !important;
+  background-color: #443bbe !important;
   border-color: #623686 !important;
 }
 

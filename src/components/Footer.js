@@ -2,29 +2,32 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
+  AiFillFacebook,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useSelector } from "react-redux";
+
 
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
-  var social ={
+  const owner = useSelector((state) => state.owner);
+
+  var social =owner.social || {
     github:"",
     twitter:"",
     linkedin:"",
     facebook:"",
   }
-  var username = "thienma"
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Developed by PND</h3>
+          <h3>Developed by {owner.fullName}({owner.phoneNumber})</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} ${username}</h3>
+          <h3>Copyright © {year} {owner.userName}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
@@ -40,12 +43,12 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href={social.twitter}
+                href={social.facebook}
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiOutlineTwitter />
+                <AiFillFacebook />
               </a>
             </li>
             <li className="social-icons">

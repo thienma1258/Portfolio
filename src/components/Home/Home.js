@@ -13,7 +13,6 @@ const Home = ({ data, actions }) => {
  
   const owner = useSelector((state)=>state.owner)
   // const state = useSelector(state)
-  
   return (
     <section>
 
@@ -43,7 +42,7 @@ const Home = ({ data, actions }) => {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img src={homeLogo} alt="home pic"  />
+              <img id="bg-image" src={homeLogo} alt="home pic"  />
             </Col>
           </Row>
         </Container>

@@ -1,6 +1,6 @@
 import { Container,Row,Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 const SocialSection = () => {
   const owner = useSelector((state) => state.owner);
@@ -28,12 +28,12 @@ const SocialSection = () => {
               </li>
               <li className="social-icons">
                 <a
-                  href={owner.social.twitter}
+                  href={owner.social.facebook}
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiOutlineTwitter />
+                  <AiFillFacebook />
                 </a>
               </li>
               <li className="social-icons">

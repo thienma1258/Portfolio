@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 function AboutCard() {
   const owner = useSelector((state) => state.owner);
-
   return (
     <Card className="quote-card-view">
       <Card.Body>
@@ -28,10 +27,11 @@ function AboutCard() {
           </ul>
 
           <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
-            "I can make thing that better for users!"{" "}
+            "I can make product used by mililons of users!"
           </p>
           <br/>
           <footer className="blockquote-footer">{owner.fullName}</footer>
+          <br/>
         </blockquote>
       </Card.Body>
     </Card>

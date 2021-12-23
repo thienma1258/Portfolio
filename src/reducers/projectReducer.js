@@ -54,7 +54,7 @@ const projectState = {
       {
         imageURL:"https://cdn.tgdd.vn/hoi-dap/651567/y-nghia-logo-cua-the-gioi-di-dong-la-gi1-800x450.jpg",
         isBlog:false,
-        description:"Internal system for MWG and help these with external system (banking,delivery,...).Maintain,support,implement new feature by staff requiredment",
+        description:"ERP system for MWG help imrpove business operator(banking,delivery,...) ",
         link:"",
         title:"ERP system",
         isNDA:true,

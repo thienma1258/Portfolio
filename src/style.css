@@ -783,3 +783,10 @@ html {
   height: 40em !important;
   position: inherit !important;
 }
+.App {
+  text-align: center;
+}
+
+.content-data{
+  text-align:left !important;
+}

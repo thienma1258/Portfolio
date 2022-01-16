@@ -4,6 +4,7 @@ import BlogsCards from "./BlogsCards";
 import Particle from "../Particle";
 import PostService from "../../api/PostService";
 import PaginationList from "../Pagination/Pagination";
+import Preloader from "../../components/Pre";
 
 const ITEM_PER_ROW = 3
 
@@ -13,17 +14,22 @@ function Blogs() {
   var colPerRow = ITEM_PER_ROW || 2;
   var md = 12 / colPerRow;
   var rows = (items.length + (colPerRow - 1)) / colPerRow;
-
+  const [loading, setIsLoading] = useState(false);
   const reloadIDs = async () => {
     var ids = await PostService.getAllIDs();
     setIDs(ids);
   };
 
   useEffect( () => {
+    setIsLoading(true);
      reloadIDs();
+    setIsLoading(false);
+
   }, []);
 
   const onChangePage = async (ids) => {
+    setIsLoading(true);
+
     var itemMap = await PostService.getByIDs(ids, [
         "name",
         "image",
@@ -34,6 +40,7 @@ function Blogs() {
         result.push(itemMap[`post-${id}`]);
       }
       setItems(result);
+      setIsLoading(false);
   };
 
   var rowCard = [];
@@ -64,6 +71,7 @@ function Blogs() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Blogs </strong>
         </h1>
+        <Preloader className={loading ? "preload-detail" : ""} load={loading} />
         {rowCard}
       <PaginationList
       className="justify-content-right float-end float-md-end paginationList"

@@ -47,11 +47,12 @@ function BlogDetail(props) {
       <Particle></Particle>
 
       <Row>
-        <Preloader className={loading ? "preload-detail" : ""} load={loading} />
-        <Col hidden={loading} className="content-data offset-md-2">
-          <h1>
+      <h1>
             {post.name}
           </h1>
+        <Preloader className={loading ? "preload-detail" : ""} load={loading} />
+        <Col hidden={loading} className="content-data offset-md-2">
+       
           <span
            dangerouslySetInnerHTML={{__html:bodyPayload}} />
         </Col>

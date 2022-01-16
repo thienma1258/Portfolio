@@ -6,3 +6,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to left, rgb(112 57 219), rgb(0 0 0));
 }
+
+.float-end {
+  float: right!important;
+}
+
+.float-end::after{
+  float:none;
+}
+
+.paginationList{
+  margin-bottom: 1em;
+  /* margin:2em; */
+}
+
+.blog-img{
+  height:15em;
+}
+
+.preload-detail{
+  position:absolute;
+
+}

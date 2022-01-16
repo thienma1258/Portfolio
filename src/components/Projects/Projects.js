@@ -18,7 +18,7 @@ function Projects() {
   for (var i = 0; i < rows; i++) {
     let itemRender = items.slice(i * colPerRow, (i + 1) * colPerRow);
     rowCard.push(
-      <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+      <Row style={{ justifyContent: "center", paddingBottom: "10px" }}  key={i}>
         {itemRender.map((item, index) => (
           <Col md={md} className="project-card" key={index}>
             <ProjectCard

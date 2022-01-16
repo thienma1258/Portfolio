@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Blogs from "./components/Projects/Blogs";
+import BlogDetail from "./components/Projects/BlogDetail";
+
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -35,6 +38,8 @@ function App() {
           <Route path="/project" component={Projects} />
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
+          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/blogs/:id" component={BlogDetail} />
         </Switch>
         <Footer />
       </div>

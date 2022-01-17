@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import PostService from "../../api/PostService";
 import { ENTITY_TYPE_POST } from "../../constant/entityType";
 import Preloader from "../../components/Pre";
@@ -23,7 +23,7 @@ function BlogDetail(props) {
         setIsLoading(true);
         let postMap = await PostService.getByIDs(
           [id],
-          ["author", "image", "title", "description"]
+          ["author", "image", "title", "description", "body"]
         );
         if (typeof postMap !== "undefined") {
           const post = postMap[`${ENTITY_TYPE_POST}-${id}`];
@@ -47,15 +47,13 @@ function BlogDetail(props) {
       <Particle></Particle>
 
       <Row>
-      <h1>
-            {post.title}
-          </h1>
+        <h1>{post.title}</h1>
+
         <Preloader className={loading ? "preload-detail" : ""} load={loading} />
         <Col hidden={loading} className="content-data offset-md-2">
-       
-          <span
-           dangerouslySetInnerHTML={{__html:bodyPayload}} />
+          <span dangerouslySetInnerHTML={{ __html: bodyPayload }} />
         </Col>
+        <h2>Author :{post.author}</h2>
       </Row>
     </Container>
   );

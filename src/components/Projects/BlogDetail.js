@@ -11,6 +11,7 @@ function BlogDetail(props) {
     title: "",
     published: "",
     thumbnail: "",
+    author:"",
     description: "",
   });
   const [bodyPayload, setBody] = useState(null);
@@ -33,6 +34,7 @@ function BlogDetail(props) {
             published: published,
             thumbnail: post.image,
             description: post.description,
+            author:post.author,
           });
           setBody(post.body);
           setIsLoading(false);

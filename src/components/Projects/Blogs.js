@@ -34,7 +34,8 @@ function Blogs() {
         "title",
         "image",
         "published",
-        "description"
+        "description",
+        "id"
       ]);
       var result = [];
       for (const id of ids) {

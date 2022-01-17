@@ -31,9 +31,10 @@ function Blogs() {
     setIsLoading(true);
 
     var itemMap = await PostService.getByIDs(ids, [
-        "name",
+        "title",
         "image",
         "published",
+        "description"
       ]);
       var result = [];
       for (const id of ids) {

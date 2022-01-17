@@ -8,7 +8,7 @@ import Preloader from "../../components/Pre";
 
 function BlogDetail(props) {
   const [post, setPost] = useState({
-    name: "",
+    title: "",
     published: "",
     thumbnail: "",
     description: "",
@@ -23,13 +23,13 @@ function BlogDetail(props) {
         setIsLoading(true);
         let postMap = await PostService.getByIDs(
           [id],
-          ["author", "name", "image", "title", "description"]
+          ["author", "image", "title", "description"]
         );
         if (typeof postMap !== "undefined") {
           const post = postMap[`${ENTITY_TYPE_POST}-${id}`];
           const published = post.published ? 1 : 0;
           setPost({
-            name: post.title,
+            title: post.title,
             published: published,
             thumbnail: post.image,
             description: post.description,
@@ -48,7 +48,7 @@ function BlogDetail(props) {
 
       <Row>
       <h1>
-            {post.name}
+            {post.title}
           </h1>
         <Preloader className={loading ? "preload-detail" : ""} load={loading} />
         <Col hidden={loading} className="content-data offset-md-2">

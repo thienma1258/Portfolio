@@ -1,6 +1,6 @@
 var lexisLogo = "./lexisnexis.jpg";
 var ertLogo = "./ert.jpg";
-var localizeLogo = "./inkr-localize.png";
+var localizeLogo = "./Inkr-localize.png";
 var accessLogo = "../access.jpg";
 
 const projectState = {

@@ -34,3 +34,7 @@
     transform: rotate(360deg);
   }
 }
+
+.blog-img {
+  height: 15em;
+}

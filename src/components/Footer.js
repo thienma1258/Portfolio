@@ -18,10 +18,10 @@ function Footer() {
     facebook: "",
   };
   return (
-    <Container fluid className="footer">
-      <Row>
+    <Container fluid className="footer" suppressHydrationWarning>
+      <Row suppressHydrationWarning>
         <Col xs={8}></Col>
-        <Col xs={4}>
+        <Col xs={4} suppressHydrationWarning>
           <div className="float-md-right">
             <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
              {pickQuotes.quote || ""}

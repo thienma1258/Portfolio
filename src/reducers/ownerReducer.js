@@ -1,7 +1,7 @@
 import { SKILL_SET,TOOLS } from "../constant/skillSet";
 
-import cvPDF from "../Assets/cv.pdf"
 
+var cvPDF = "./cv.pdf"
 
 const initialState = {
   fullName: "Pham Ngoc Dong",

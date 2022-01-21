@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
@@ -9,6 +8,7 @@ import SocialSection  from "../Contact/Social";
 
 import {useSelector} from "react-redux"
 
+var homeLogo ="./home-main.svg"
 const Home = ({ data, actions }) => {
  
   const owner = useSelector((state)=>state.owner)

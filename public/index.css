@@ -46,3 +46,17 @@ pre {
   padding: 5px;
   border-radius: 0.3em;
 }
+
+#preloader{
+  background-image: url("pre.svg");
+}
+
+.home-section {
+  position: relative;
+  z-index: -1;
+  background-image: var(--image-gradient), url("home-bg.jpg");
+  /* background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important; */
+}

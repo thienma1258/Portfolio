@@ -3,15 +3,18 @@ import Card from "react-bootstrap/Card";
 import { BsLink } from "react-icons/bs";
 import Button from "react-bootstrap/Button";
 import { BiLinkExternal } from "react-icons/bi";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 
 function BlogsCards(props) {
-  let history = useHistory();
+  // let history = useHistory();
+  const router = useRouter();
 
   const goToBlogDetail = () => {
-    history.push(`/blogs/${props.id}`);
+    // history.push(`/blogs/${props.id}`);
+    router.push({
+      pathname: `/blogs/${props.id}-${props.slug}`,
+    });
   };
-
 
   return (
     <a
@@ -28,9 +31,8 @@ function BlogsCards(props) {
           &nbsp;
           {props.title}
           <p style={{ marginBlockEnd: "0em" }}>{props.site}</p>
-          <Button variant="primary" onClick={goToBlogDetail} >
-            <BiLinkExternal /> &nbsp;
-            View Blogs
+          <Button variant="primary" onClick={goToBlogDetail}>
+            <BiLinkExternal /> &nbsp; View Blogs
           </Button>
         </Card.Footer>
       </Card>

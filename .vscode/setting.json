@@ -1,0 +1,164 @@
+{
+    // Debug
+    "debug.javascript.autoAttachFilter": "disabled",
+  
+    // Explorer
+    "explorer.confirmDragAndDrop": false,
+  
+    // Editor - Format
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+  
+    // Editor - Indentation
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+  
+    // Editor - Rulers
+    "editor.rulers": [120],
+  
+    // Editor - Others
+    "editor.bracketPairColorization.enabled": true,
+  
+    // Git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+  
+    // Git Diff Editor
+    "diffEditor.ignoreTrimWhitespace": false,
+  
+    // Terminal
+    "terminal.integrated.scrollback": 1000000000,
+  
+    // Extensions
+    "extensions.ignoreRecommendations": false,
+  
+    // Files
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/build/**": true,
+      "**/.next/**": true,
+      "**/node_modules/**": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+  
+    // VSIcons
+    "vsicons.projectDetection.autoReload": true,
+    "vsicons.dontShowNewVersionMessage": true,
+  
+    // GitLens
+    "gitlens.views.repositories.files.layout": "auto",
+    "gitlens.advanced.messages": {
+      "suppressCommitHasNoPreviousCommitWarning": false,
+      "suppressCommitNotFoundWarning": false,
+      "suppressFileNotUnderSourceControlWarning": false,
+      "suppressGitVersionWarning": false,
+      "suppressLineUncommittedWarning": false,
+      "suppressNoRepositoryWarning": false
+    },
+  
+    // Shell
+    "shellcheck.useWorkspaceRootAsCwd": true,
+    "shellcheck.customArgs": [
+      //
+      "--enable=all",
+      "--external-sources"
+    ],
+    "shellcheck.exclude": [
+      //
+      "SC2310"
+    ],
+  
+    // CSS
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[less]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  
+    // YAML
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  
+    // Javascript
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnPaste": false,
+      "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnPaste": false,
+      "editor.formatOnSave": false
+    },
+  
+    // JSON
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  
+    // Typescript
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnPaste": false,
+      "editor.formatOnSave": false
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnPaste": false,
+      "editor.formatOnSave": false
+    },
+  
+    // MarkdownLint
+    "markdownlint.config": {
+      // Allow punctuation marks (?!) in headers
+      "MD026": false
+    },
+  
+    // Run on Save
+    "runOnSave.commands": [
+      //
+    ],
+  
+    // Editor - Code
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+  
+    // cSpell
+    "cSpell.words": [
+      "adsbygoogle",
+      "ADSENSE",
+      "codegen",
+      "ICDDB",
+      "Linkedin",
+      "mailtrain",
+      "ntob",
+      "opensearchdescription",
+      "Otakumo",
+      "preconnect",
+      "recsys",
+      "substore",
+      "substores",
+      "swipeable",
+      "Swiper",
+      "TTFB",
+      "typeform",
+      "Usergroup",
+      "uzip",
+      "xxhashjs"
+    ]
+  }
+  

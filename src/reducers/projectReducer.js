@@ -1,7 +1,7 @@
-import lexisLogo from "../Assets/LexisNexis_Logo.jpg";
-import ertLogo from "../Assets/ERT_Logo.jpg";
-import localizeLogo from "../Assets/Inkr-localize.jpg";
-import accessLogo from "../Assets/access.jpg";
+var lexisLogo = "./lexisnexis.jpg";
+var ertLogo = "./ert.jpg";
+var localizeLogo = "./inkr-localize.png";
+var accessLogo = "../access.jpg";
 
 const projectState = {
   itemPerRow: 3,

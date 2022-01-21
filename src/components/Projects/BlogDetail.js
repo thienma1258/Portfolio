@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import PostService from "../../api/PostService";
 import { ENTITY_TYPE_POST } from "../../constant/entityType";
 import Preloader from "../../components/Pre";
+import { useRouter } from "next/router";
+import { getIDFromSlug } from "../../utils/utils";
 
 function BlogDetail(props) {
+  const router = useRouter();
+
   const [post, setPost] = useState({
     title: "",
     published: "",
     thumbnail: "",
-    author:"",
+    author: "",
     description: "",
   });
   const [bodyPayload, setBody] = useState(null);
   const [loading, setIsLoading] = useState(false);
-  let { id } = useParams();
+  const { slug } = router.query;
+  let id=getIDFromSlug(slug);
 
   useEffect(() => {
     async function fetchMyAPI() {
@@ -34,7 +39,7 @@ function BlogDetail(props) {
             published: published,
             thumbnail: post.image,
             description: post.description,
-            author:post.author,
+            author: post.author,
           });
           setBody(post.body);
           setIsLoading(false);

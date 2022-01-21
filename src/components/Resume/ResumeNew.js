@@ -32,7 +32,7 @@ function ResumeNew() {
       <Container fluid className="resume-section">
         <Particle />
         <Document file={owner.resumeURL} onLoadSuccess={onDocumentLoadSuccess} >
-          <Page pageNumber={currentPage} height ="1000" className="resume-page" />
+          <Page pageNumber={currentPage} height={1000} className="resume-page" />
         </Document>
         <p style={{position: "relative"}}>
         {currentPage >1 ?(<Button variant="secondary" className ="button-page" onClick={()=>setCurrentPages(currentPage-1)}>Previous</Button>):("")}

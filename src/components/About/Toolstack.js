@@ -26,8 +26,8 @@ function Toolstack() {
   const tools = owner.tools || [];
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-    {tools.map(tool => (
-      <Col xs={4} md={2} className="tech-icons">
+    {tools.map((tool,key) => (
+      <Col xs={4} md={2} className="tech-icons" key={key}>
         {mapToolWithIcon[tool]}
       </Col>
     ))}

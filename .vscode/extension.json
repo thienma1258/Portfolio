@@ -1,0 +1,61 @@
+{
+  "recommendations": [
+    // Theme
+    "vscode-icons-team.vscode-icons",
+
+    // Git
+    "codezombiech.gitignore",
+    "sidneys1.gitconfig",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+
+    // All Languages
+    "esbenp.prettier-vscode",
+    "wmaurer.change-case",
+    "streetsidesoftware.code-spell-checker",
+    "pucelle.run-on-save",
+
+    // .env
+    "mikestead.dotenv",
+
+    // Markdown
+    "DavidAnson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-mermaid",
+
+    // Jenkins
+    "secanis.jenkinsfile-support",
+
+    // Shell
+    "timonwong.shellcheck",
+    "foxundermoon.shell-format",
+    "remisa.shellman",
+
+    // JIRA & BitBucket
+    "atlassian.atlascode",
+
+    // Node
+    "christian-kohler.npm-intellisense",
+    "eg2.vscode-npm-script",
+    "pflannery.vscode-versionlens",
+    "dbaeumer.vscode-eslint",
+    "oouo-diogo-perdigao.docthis",
+
+    // JSX
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+
+    // Stylelint
+    "stylelint.vscode-stylelint",
+
+    // JSON
+    "eriklynd.json-tools"
+  ],
+
+  "unwantedRecommendations": [
+    // Azure
+    "ms-vscode.azurecli",
+    "azuredevspaces.azds"
+  ]
+}

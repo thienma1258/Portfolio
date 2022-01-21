@@ -37,8 +37,8 @@ function Techstack() {
   const skillSet = owner.skillSet || [];
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {skillSet.map((skill) => (
-        <Col xs={4} md={2} className="tech-icons">
+      {skillSet.map((skill,index) => (
+        <Col xs={4} md={2} className="tech-icons" key={index  }>
           {mapStackWithIcon[skill]}
         </Col>
       ))}

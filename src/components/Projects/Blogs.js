@@ -22,7 +22,8 @@ function Blogs() {
 
   useEffect( () => {
     setIsLoading(true);
-     reloadIDs();
+
+    reloadIDs();
     setIsLoading(false);
 
   }, []);
@@ -35,7 +36,8 @@ function Blogs() {
         "image",
         "published",
         "description",
-        "id"
+        "id",
+        "slug"
       ]);
       var result = [];
       for (const id of ids) {
@@ -59,6 +61,7 @@ function Blogs() {
               isBlog={true}
               title={item.title}
               description={item.description}
+              slug={item.slug}
             />
           </Col>
         ))}

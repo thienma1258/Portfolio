@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { ImBlog } from "react-icons/im";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 import { CgFileDocument } from "react-icons/cg";
 
+
+var logo = "./logo.png";
+
 function NavBar() {
- 
+  const router = useRouter()
+
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -26,7 +30,14 @@ function NavBar() {
     }
   }
 
+  useEffect(function mount() {
   window.addEventListener("scroll", scrollHandler);
+  });
+
+  function onclickChangeRoute(path){
+    router.push(path);
+    updateExpanded(false)
+  }
 
   return (
     <Navbar
@@ -52,16 +63,15 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link  to="/" onClick={() => onclickChangeRoute("/")}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
                 to="/about"
-                onClick={() => updateExpanded(false)}
+                onClick={() => onclickChangeRoute("/about")}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
@@ -69,9 +79,8 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
                 to="/project"
-                onClick={() => updateExpanded(false)}
+                onClick={() => onclickChangeRoute("/projects")}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -82,9 +91,8 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
                 to="/resume"
-                onClick={() => updateExpanded(false)}
+                onClick={() => onclickChangeRoute("/resume")}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
@@ -92,9 +100,8 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
                 to="/blogs"
-                onClick={() => updateExpanded(false)}
+                onClick={() => onclickChangeRoute("/blogs")}
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
